@@ -1,11 +1,11 @@
 ---
-title: "在WSL中使用emacs-rime"
+title: "在 WSL 中使用 emacs-rime"
 date: 2026-01-15T13:04:37+08:00
 categories: ["Emacs"]
 tags: ["Emacs", "WSL", "RIME"]
 ---
 
-在WSL中使用Emacs时，无法直接使用Windows安装的RIME输入法，当前比较好的方案是在WSL中安装[librime](https://github.com/rime/librime)，在Emacs中使用[emacs-rime](https://github.com/DogLooksGood/emacs-rime)作为前端，使用体验比较贴近原生RIME输入法。
+在 WSL 中使用 Emacs 时，无法直接使用 Windows 安装的 RIME 输入法，当前比较好的方案是在 WSL 中安装 [librime](https://github.com/rime/librime) ，在 Emacs 中使用 [emacs-rime](https://github.com/DogLooksGood/emacs-rime) 作为前端，使用体验比较贴近原生 RIME 输入法。
 <!--more-->
 
 首先在WSL中安装librime：`apt install librime-dev rime-data-double-pinyin`。
@@ -25,7 +25,7 @@ tags: ["Emacs", "WSL", "RIME"]
                                   :left-fringe 5
                                   :right-fringe 5))
   (rime-cursor "\u2038")
-  :init
+  :config
   (defun +rime-custom-faces (&rest _)
     (modus-themes-with-colors
       (custom-set-faces
@@ -35,7 +35,7 @@ tags: ["Emacs", "WSL", "RIME"]
        `(rime-comment-face ((,c :foreground ,comment)))
        `(rime-preedit-face ((,c :foreground ,fg-main :underline (:style dots)))))))
   (add-hook 'modus-themes-after-load-theme-hook #'+rime-custom-faces)
-  :config
+  (+rime-custom-faces)
   (keymap-set rime-mode-map "C-`" #'rime-send-keybinding)
   (defun +rime-finalize ()
     (when rime--lib-loaded
