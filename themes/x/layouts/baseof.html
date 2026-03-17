@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en" }}" class="scroll-smooth" data-default-appearance="{{ .Site.Params.defaultTheme | default "light" }}">
+<html lang="{{ .Site.Language.Locale | default "en" }}" class="scroll-smooth" data-default-appearance="{{ .Site.Params.defaultTheme | default "light" }}">
 {{- partial "head.html" . -}}
 <body>
   <header class="header">
