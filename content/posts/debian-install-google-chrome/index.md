@@ -26,3 +26,5 @@ sudo apt install google-chrome-stable
 ```bash
 sudo apt purge google-chrome-stable
 ```
+
+> 开源版本的 Chromium 可以直接通过命令 `sudo apt install chromium chromium-l10n` 进行安装。
