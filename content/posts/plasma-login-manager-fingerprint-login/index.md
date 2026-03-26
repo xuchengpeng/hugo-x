@@ -49,7 +49,7 @@ fprintd-enroll -f right-middle-finger
 
 添加下面两行配置到开头位置，这样就可以使用密码或者指纹识别进行登录。
 
-```text
+{{< highlight text "hl_lines=5-6" >}}
 ...
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
@@ -57,7 +57,7 @@ fprintd-enroll -f right-middle-finger
 auth        sufficient  pam_unix.so try_first_pass likeauth nullok
 auth        sufficient  pam_fprintd.so
 ...
-```
+{{< /highlight >}}
 
 在系统启动登录界面或锁屏界面时，直接敲击回车键，就可以使用指纹认证登录了。
 
