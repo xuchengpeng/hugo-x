@@ -12,7 +12,7 @@
 </span></span><span class=line><span class=cl>wget https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage -O appimagetool
 </span></span><span class=line><span class=cl>chmod a+x ./appimagetool
 </span></span></code></pre></div><p>然后下载官方的 deb 包并解压到需要打包的目录：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>mkdir <span class=nv>$APP</span>.AppDir
-</span></span><span class=line><span class=cl>wget <span class=s2>&#34;https://issuepcdn.baidupcs.com/issue/netdisk/LinuxGuanjia/4.17.8/baidunetdisk_4.17.8_amd64.deb&#34;</span>
+</span></span><span class=line><span class=cl>wget https://issuepcdn.baidupcs.com/issue/netdisk/LinuxGuanjia/4.17.8/baidunetdisk_4.17.8_amd64.deb
 </span></span><span class=line><span class=cl>ar x ./baidunetdisk_4.17.8_amd64.deb
 </span></span><span class=line><span class=cl>tar xf ./data.tar.bz2 -C <span class=nv>$APP</span>.AppDir
 </span></span></code></pre></div><p>在打包前，需要先创建 AppRun、desktop 和图标：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>cd</span> <span class=nv>$APP</span>.AppDir
