@@ -29,7 +29,7 @@ pid_file           "~/.config/mpd/pid"
 state_file         "~/.local/state/mpd/state"
 ```
 
-配置音频，这里选择更加流行的 PipeWire ，在配置文件中添加以下内容：
+配置音频，这里选择更加流行的 PipeWire (取决于你的操作系统具体用的是 PipeWire、PulseAudio 或者 ALSA) ，在配置文件中添加以下内容：
 
 ```text
 audio_output {
