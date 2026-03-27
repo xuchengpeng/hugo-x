@@ -1,0 +1,54 @@
+---
+title: "Arch Linux 配置 MPD"
+date: 2026-03-27T11:13:49+08:00
+categories: ["Linux"]
+tags: ["Linux", "Arch", "MPD"]
+---
+
+Music Player Daemon (MPD) is a flexible, powerful, server-side application for playing music.
+<!--more-->
+
+安装服务端和客户端软件包： `sudo pacman -S mpd mpc` 。
+
+MPD 用户配置文件路径为 `~/.config/mpd/mpd.conf` ，系统级配置文件路径为 `/etc/mpd.conf` 。
+
+配置文件和目录的位置：
+
+```bash
+mkdir -p ~/.config/mpd/playlists
+mkdir -p ~/.local/state/mpd
+```
+
+在配置文件中添加以下内容：
+
+```text
+music_directory    "/data/music"
+playlist_directory "~/.config/mpd/playlists"
+db_file            "~/.config/mpd/database"
+pid_file           "~/.config/mpd/pid"
+state_file         "~/.local/state/mpd/state"
+```
+
+配置音频，这里选择更加流行的 PipeWire ，在配置文件中添加以下内容：
+
+```text
+audio_output {
+    type "pipewire"
+    name "PipeWire Sound Server"
+}
+```
+
+到这里， MPD 服务端就配置完成了，启动服务后就可以通过客户端进行播放音乐。
+
+```bash
+systemctl --user start mpd.service
+mpc update # 扫描音乐目录建立数据库
+mpc add <file> # 添加文件或目录下的所有文件到播放队列
+mpc clear # 清空播放队列
+mpc play # 开始播放
+mpc stop # 停止播放
+mpc next # 下一首
+mpc prev # 上一首
+mpc pause # 暂停播放
+mpc toggle # 切换播放和暂停
+```
