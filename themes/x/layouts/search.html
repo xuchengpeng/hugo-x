@@ -11,7 +11,7 @@
                  aria-label="search" type="search" autocomplete="off" maxlength="64">
           <ul id="search-results" aria-label="search results"></ul>
         </div>
-        <script defer src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0/dist/fuse.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/fuse.js@7.2.0/dist/fuse.min.js"></script>
         {{ $jsSearch := resources.Get "js/search.js" }}
         {{ $jsSearch = $jsSearch | resources.ExecuteAsTemplate "js/search.js" . | resources.Minify }}
         <script defer type="text/javascript" src="{{ $jsSearch.RelPermalink }}"></script>
