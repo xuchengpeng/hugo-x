@@ -1,5 +1,5 @@
 ---
-title: "C++ promise和future"
+title: "C++ promise 和 future"
 date: 2026-06-12T15:17:22+08:00
 categories: ["Programming"]
 tags: ["Programming", "C++"]
