@@ -81,9 +81,9 @@ B-->C[Profit]
 "Toto, I've a feeling we're not in Kansas anymore." The Wizard of Oz (1939)
 {{< /typeit >}}
 
-## tabpane
+## tabs
 
-{{< tabpane >}}
+{{< tabs >}}
 {{< tab "Ruby" >}}
 
 ```ruby
@@ -105,10 +105,10 @@ console.log("Hello");
 ```
 
 {{< /tab >}}
-{{< /tabpane >}}
+{{< /tabs >}}
 
 
-{{< tabpane align="right" >}}
+{{< tabs align="right" >}}
 {{< tab "Ruby" >}}
 
 ```ruby
@@ -130,7 +130,7 @@ console.log("Hello");
 ```
 
 {{< /tab >}}
-{{< /tabpane >}}
+{{< /tabs >}}
 
 ## bilibili
 
