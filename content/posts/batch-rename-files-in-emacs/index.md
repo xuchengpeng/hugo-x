@@ -1,0 +1,14 @@
+---
+title: "在 Emacs 中批量重命名文件"
+date: 2026-09-28T15:29:36+08:00
+categories: ["Emacs"]
+tags: ["Emacs"]
+---
+
+在 Emacs 的 Dired 模式中，可以快捷方便的进行文件批量重命名。
+<!--more-->
+
+1. 首先运行 `dired` 切换到对应的目录下；
+2. 执行 `C-c C-e` 进入 WDired 模式；
+3. 执行 `query-replace` 进行查找替换对文件名称进行修改；
+4. 执行 `C-c C-c` 完成重命名，或者执行 `C-c ESC` 放弃重命名。
