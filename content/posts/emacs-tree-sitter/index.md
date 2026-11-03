@@ -60,7 +60,7 @@ Emacs会先在`treesit-extra-load-path`目录查找语言解析器，然后在`~
 
 ## 使用预编译的语言解析器
 
-[tree-sitter-langs](https://github.com/emacs-tree-sitter/tree-sitter-langs)包提供了预编译的语言解析器，在release页面下载对应操作系统的语言解析器，将包内的库文件解压到`~/.emacs.d/tree-sitter/`目录下。
+[tree-sitter-language-pack](https://github.com/xberg-io/tree-sitter-language-pack) 或 [tree-sitter-langs](https://github.com/emacs-tree-sitter/tree-sitter-langs)包提供了预编译的语言解析器，在release页面下载对应操作系统的语言解析器，将包内的库文件解压到`~/.emacs.d/tree-sitter/`目录下。
 
 需要将所有的`<LANGUAGE>.so`重命名为`libtree-sitter-<LANGUAGE>.so`，批量重命名的快捷命令如下：
 
