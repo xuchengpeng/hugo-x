@@ -1,0 +1,14 @@
+.github/workflows/hugo.yaml
+  h_76dde7977e1f21 59,63-69
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "10.11.1",
+  "base_commit_sha": "0d78f4614705479b28bec216186aa4195e372e6d",
+  "prompts": {},
+  "humans": {
+    "h_76dde7977e1f21": {
+      "author": "xuchengpeng <chuckxcp@qq.com>"
+    }
+  }
+}
